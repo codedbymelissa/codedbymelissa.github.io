@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Lastname Firstname: 225</title>
+    <title>Grix, Melissa: 225</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
     <link href="css/styles.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Firstname Lastname</a>
+    <a class="navbar-brand" href="#">Melissa Grix</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,17 +49,22 @@
 
     <script>
         const user = {
-            name: '',
-            imageUrl: '',
-            bio: ''
+            name: 'Melissa Grix',
+            imageUrl: 'images/me.png',
+            bio: 'Hello! My name is Melissa, and I’m currently working toward my degree in Web Design and Development. I’m on track to graduate this fall, which I’m very excited about! I live in Chicago with my partner and our two high-energy dogs. I’ve worked as a strength coach for the past seven years– a role I love and plan to continue in some capacity even after graduation. When I’m not working or studying, I enjoy hiking trails with my dogs and spending time outdoors.'
         };
 
         // Step one - Create a React element
+        const h1Element = React.createElement('h1', null, user.name);
+        const imgElement = React.createElement('img', { src: user.imageUrl, alt: 'Photo of ' + user.name });
+        const pElement = React.createElement('p', null, user.bio);
 
         // Step 2: Render the React element
+        ReactDOM.render(h1Element, document.getElementById('h1'));
+        ReactDOM.render(imgElement, document.getElementById('img'));
+        ReactDOM.render(pElement, document.getElementById('content'));
 
     </script>
-
 </main><!-- /.container -->
 
 <!-- Bootstrap core JavaScript
