@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Dogs: Melissa Grix</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+    <!-- Bootstrap core CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Melissa Grix</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="grid.html">Grid</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carousel.html">Carousel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mydogs.html">My Dogs</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container-fluid">
+    <div id="h1"></div>
+    <div id="img"></div>
+    <div id="content"></div>
+
+      <div class="accordion mt-4" id="dogFactsAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#goldenFact" aria-expanded="true" aria-controls="goldenFact">
+                Golden Retriever: Sophie
+              </button>
+            </h2>
+          </div>
+          <div id="goldenFact" class="collapse show" aria-labelledby="headingOne" data-parent="#dogFactsAccordion">
+            <div class="card-body">
+              Sophie is sweet, gentle, and always ready for a cuddle. She loves fetch, belly rubs, and greeting every human like they’re her best friend.
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cattleFact" aria-expanded="false" aria-controls="cattleFact">
+                Cattle Dog Mix: Kobe
+              </button>
+            </h2>
+          </div>
+          <div id="cattleFact" class="collapse" aria-labelledby="headingTwo" data-parent="#dogFactsAccordion">
+            <div class="card-body">
+              Kobe is incredibly smart and full of energy. He loves chasing squirrels, solving puzzle toys, and staying alert to everything around him.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </main>
+
+  
+    <footer class="bg-black text-lavender text-center py-4">
+        <p class="mb-0">© 2025 Melissa Grix. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const user = {
+            name: 'My Dogs',
+            imageUrl: 'images/puppies.jpg',
+            bio: 'I have two wonderful dogs! One is a lovable Golden Retriever who’s always ready for a cuddle and loves making new friends. The other is a playful, energetic Cattle Dog mix who keeps things exciting with his curious nature and boundless energy. They’re the perfect duo— gentle heart and smart explorer.'
+        }
+        // Step one - Create a React element
+        const h1Element = React.createElement('h1', null, user.name);
+        const imgElement = React.createElement('img', { src: user.imageUrl, alt: 'Photo of Melissa Grix’s dogs' });
+        const pElement = React.createElement('p', null, user.bio);
+
+        // Step 2: Render the React element
+        ReactDOM.render(h1Element, document.getElementById('h1'));
+        ReactDOM.render(imgElement, document.getElementById('img'));
+        ReactDOM.render(pElement, document.getElementById('content'));
+
+    </script>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
