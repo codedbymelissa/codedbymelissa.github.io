@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>About: Melissa Grix</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <title>My Dogs: Melissa Grix</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
     <link href="css/styles.css" rel="stylesheet">
@@ -39,10 +39,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
             </li>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="mydogs.html">My Dogs</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mydogs.html">My Dogs</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -52,16 +51,54 @@
     <div id="img"></div>
     <div id="content"></div>
 
+      <div class="accordion mt-4" id="dogFactsAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#goldenFact" aria-expanded="true" aria-controls="goldenFact">
+                Golden Retriever: Sophie
+              </button>
+            </h2>
+          </div>
+          <div id="goldenFact" class="collapse show" aria-labelledby="headingOne" data-parent="#dogFactsAccordion">
+            <div class="card-body">
+              Sophie is sweet, gentle, and always ready for a cuddle. She loves fetch, belly rubs, and greeting every human like they’re her best friend.
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cattleFact" aria-expanded="false" aria-controls="cattleFact">
+                Cattle Dog Mix: Kobe
+              </button>
+            </h2>
+          </div>
+          <div id="cattleFact" class="collapse" aria-labelledby="headingTwo" data-parent="#dogFactsAccordion">
+            <div class="card-body">
+              Kobe is incredibly smart and full of energy. He loves chasing squirrels, solving puzzle toys, and staying alert to everything around him.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </main>
+
+  
+    <footer class="bg-black text-lavender text-center py-4">
+        <p class="mb-0">© 2025 Melissa Grix. All rights reserved.</p>
+    </footer>
+
     <script>
         const user = {
-            name: 'Melissa Grix',
-            imageUrl: 'images/me.png',
-            bio: 'Hello! My name is Melissa, and I’m currently working toward my degree in Web Design and Development. I’m on track to graduate this fall, which I’m very excited about! I live in Chicago with my partner and our two high-energy dogs. I’ve worked as a strength coach for the past seven years– a role I love and plan to continue in some capacity even after graduation. When I’m not working or studying, I enjoy hiking trails with my dogs and spending time outdoors.'
-        };
-
+            name: 'My Dogs',
+            imageUrl: 'images/puppies.jpg',
+            bio: 'I have two wonderful dogs! One is a lovable Golden Retriever who’s always ready for a cuddle and loves making new friends. The other is a playful, energetic Cattle Dog mix who keeps things exciting with his curious nature and boundless energy. They’re the perfect duo— gentle heart and smart explorer.'
+        }
         // Step one - Create a React element
         const h1Element = React.createElement('h1', null, user.name);
-        const imgElement = React.createElement('img', { src: user.imageUrl, alt: 'Photo of ' + user.name });
+        const imgElement = React.createElement('img', { src: user.imageUrl, alt: 'Photo of Melissa Grix’s dogs', className: 'img-fluid' });
         const pElement = React.createElement('p', null, user.bio);
 
         // Step 2: Render the React element
@@ -71,20 +108,15 @@
 
     </script>
 
-</main><!-- /.container -->
 
-<footer class="bg-black text-lavender text-center py-4">
-    <p class="mb-0">© 2025 Melissa Grix. All rights reserved.</p>
-  </footer>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
